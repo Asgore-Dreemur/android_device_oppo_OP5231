@@ -1,0 +1,1 @@
+cmd_usr/include/mediatek/.install := /bin/bash ../scripts/headers_install.sh ./usr/include/mediatek ../include/uapi/mediatek vpu_ioctl.h; /bin/bash ../scripts/headers_install.sh ./usr/include/mediatek ./include/generated/uapi/mediatek ; touch usr/include/mediatek/.install
