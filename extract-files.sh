@@ -62,6 +62,34 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${SIGSCAN}" -p "AB 0B 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
+         vendor/bin/hw/android.hardware.vibrator-service.mediatek)
+            "$PATCHELF" --replace-needed "android.hardware.vibrator-V2-ndk_platform.so" "android.hardware.vibrator-V2-ndk.so" "$2"
+            ;;
+         vendor/bin/hw/android.hardware.gnss-service.mediatek)
+            "$PATCHELF" --replace-needed "android.hardware.gnss-V1-ndk_platform.so" "android.hardware.gnss-V1-ndk.so" "$2"
+            ;;
+         vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so)
+            "$PATCHELF" --replace-needed "android.hardware.gnss-V1-ndk_platform.so" "android.hardware.gnss-V1-ndk.so" "$2"
+            ;;
+         vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so | vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so)
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            ;;
+         vendor/bin/hw/camerahalserver)
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            ;;
+         vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
+         	"$PATCHELF" --add-needed "libcamera_metadata_shim.so" "$2"
+         	;;
+         vendor/lib64/libkeystore-engine-wifi-hidl.so)
+            "$PATCHELF" --replace-needed "android.system.keystore2-V1-ndk_platform.so" "android.system.keystore2-V1-ndk.so" "$2"
+            ;;
+         odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service)
+            "$PATCHELF" --replace-needed "android.hardware.biometrics.face-V1-ndk_platform.so" "android.hardware.biometrics.face-V1-ndk.so" "$2"
+            "$PATCHELF" --replace-needed "android.hardware.biometrics.common-V1-ndk_platform.so" "android.hardware.biometrics.common-V1-ndk.so" "$2"
+            ;;
+         vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc)
+            sed -i '/vts.native_server.on/,+1d' "$2"
+            ;;
     esac
 }
 

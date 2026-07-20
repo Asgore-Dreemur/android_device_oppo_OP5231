@@ -1,0 +1,1 @@
+allow ccci_mdinit proc_oplus_node:file { open getattr read };

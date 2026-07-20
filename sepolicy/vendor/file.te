@@ -1,0 +1,10 @@
+type proc_oplus_node,           file_type, proc_type;
+type proc_dev_lcd,              file_type, proc_type;
+type sysfs_platform_file,       file_type, sysfs_type;
+type sysfs_oplus_file,          file_type, sysfs_type;
+type sysfs_fingerprint,         file_type, sysfs_type;
+type hal_oplus_sensor_exec,     exec_type, vendor_file_type, file_type;
+type hal_fingerprint_lib,       vendor_file_type, file_type;
+type oplus_custom_block_device, dev_type;
+type camera_persist_file,       file_type;
+type dev_sensor_node,           dev_type;

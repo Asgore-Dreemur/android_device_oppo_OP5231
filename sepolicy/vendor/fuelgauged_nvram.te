@@ -1,0 +1,3 @@
+allow fuelgauged_nvram sysfs_dt_firmware_android:dir search;
+allow fuelgauged_nvram sysfs_dt_firmware_android:file r_file_perms;
+allow fuelgauged_nvram proc_oplus_node:file { open getattr read };

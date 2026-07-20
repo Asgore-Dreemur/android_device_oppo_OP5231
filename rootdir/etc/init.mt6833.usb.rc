@@ -80,6 +80,7 @@ on boot
 
     # for usb otg sdcard hot plug detection
     write /sys/module/block/parameters/events_dfl_poll_msecs 1000
+    
 
 on charger
     mkdir /config/usb_gadget/g1 0770 shell shell
@@ -102,7 +103,7 @@ on charger
     setprop vendor.usb.acm_port0 ""
     setprop vendor.usb.acm_port1 ""
     setprop vendor.usb.acm_enable 0
-    setprop sys.usb.config hid
+    setprop persist.sys.usb.config via_bypass,adb
 
 ### more command at init.usb.configfs.rc ###
 on property:sys.usb.config=none && property:sys.usb.configfs=1

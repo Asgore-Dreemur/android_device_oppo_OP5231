@@ -68,7 +68,6 @@ pm.dexopt.post-boot=extract
 pm.dexopt.shared=speed
 qemu.hw.mainkeys=0
 ro.actionable_compatible_property.enabled=true
-ro.allow.mock.location=0
 ro.base_build=noah
 ro.camera.sound.forced=0
 ro.config.per_app_memcg=false
@@ -102,5 +101,5 @@ sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 vendor.mtk_thumbnail_optimization=true
 vendor.rild.libargs=-d /dev/ttyC0
-vendor.rild.libpath=mtk-ril.so
+vendor.rild.libpath=libmtk-ril.so
 

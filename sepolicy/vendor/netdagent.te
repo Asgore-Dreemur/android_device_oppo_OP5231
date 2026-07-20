@@ -1,0 +1,1 @@
+allow netdagent self:udp_socket { create ioctl };
