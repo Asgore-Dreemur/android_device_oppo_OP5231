@@ -1,0 +1,13 @@
+allow hal_fingerprint_default proc_fingerprint_info:file { open read };
+allow hal_fingerprint_default init:unix_stream_socket connectto;
+allow hal_fingerprint_default property_socket:sock_file write;
+allow hal_fingerprint_default sysfs_batteryinfo:dir search;
+allow hal_fingerprint_default sysfs_batteryinfo:file { open read };
+allow hal_fingerprint_default sysfs_devices:dir { open read search };
+allow hal_fingerprint_default sysfs_devices:file { open read write };
+allow hal_fingerprint_default vendor_sysfs_ccif:file { open read };
+allow hal_fingerprint_default vendor_sysfs_fingerprint:file { open read write };
+allow hal_fingerprint_default vendor_fingerprint_prop:file { getattr map open read };
+allow hal_fingerprint_default vendor_fingerprint_prop:property_service set;
+allow hal_fingerprint_default vendor_hal_fingerprint_hwservice_oplus:hwservice_manager { add find };
+allow hal_fingerprint_default vendor_hal_orms_hwservice_oplus:hwservice_manager { add find };

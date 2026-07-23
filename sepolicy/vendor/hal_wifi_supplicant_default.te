@@ -1,1 +1,1 @@
-allow hal_wifi_supplicant_default default_android_hwservice:hwservice_manager { add find };
+allow hal_wifi_supplicant_default vendor_hal_wlan_hwservice_oplus:hwservice_manager { add find };

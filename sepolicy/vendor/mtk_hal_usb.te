@@ -1,0 +1,2 @@
+allow mtk_hal_usb sysfs_devices:dir search;
+allow mtk_hal_usb sysfs_devices:file { getattr open read };

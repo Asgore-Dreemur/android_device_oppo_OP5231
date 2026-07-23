@@ -1,4 +1,9 @@
-allow mtk_hal_sensors dev_sensor_node:chr_file { open read };
+type proc_oplus_sensor, proc_type, fs_type;
+type vendor_dev_oplus_sensor, dev_type;
+type vendor_sysfs_oplus_sensor, sysfs_type, fs_type;
+
+allow mtk_hal_sensors vendor_dev_oplus_sensor:chr_file { open read };
+allow mtk_hal_sensors proc_oplus_sensor:file { open read };
+allow mtk_hal_sensors vendor_sysfs_oplus_sensor:file { open read write };
 allow mtk_hal_sensors hal_system_suspend_service:service_manager find;
-allow mtk_hal_sensors proc_oplus_node:file { open read };
-allow mtk_hal_sensors sysfs_oplus_file:file { open read write };
+allow mtk_hal_sensors sysfs_devices:dir search;

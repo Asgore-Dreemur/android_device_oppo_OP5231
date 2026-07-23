@@ -1,0 +1,4 @@
+allow system_suspend sysfs_batteryinfo:dir { open read };
+allow system_suspend sysfs_batteryinfo:file { getattr };
+allow system_suspend sysfs_wakeup:dir { open read };
+allow system_suspend sysfs_wakeup:file { getattr read write open };

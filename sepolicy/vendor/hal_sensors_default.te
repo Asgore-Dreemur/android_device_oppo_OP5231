@@ -1,0 +1,7 @@
+allow hal_sensors_default hf_manager_device:chr_file { ioctl open read write };
+allow hal_sensors_default persist_data_file:dir search;
+allow hal_sensors_default proc_oplus_sensor:file { open read write };
+allow hal_sensors_default block_device:dir search;
+allow hal_sensors_default vendor_hal_sensor_hwservice_oplus:hwservice_manager find;
+allow hal_sensors_default mnt_vendor_file:dir search;
+allow hal_sensors_default vendor_hal_sensor_hwservice_oplus:hwservice_manager add;

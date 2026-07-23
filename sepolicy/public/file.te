@@ -1,0 +1,4 @@
+type camera_persist_file,           file_type;
+type proc_oplus_version,            proc_type, fs_type;
+type proc_fingerprint_info,         proc_type, fs_type;
+type sysfs_devices,                 sysfs_type, fs_type;

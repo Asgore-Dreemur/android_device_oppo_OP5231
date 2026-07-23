@@ -1,0 +1,2 @@
+add_hwservice(hal_tee_default, vendor_hal_tee_hwservice_oplus)
+allow hal_tee_default vendor_hal_tee_hwservice_oplus:hwservice_manager { add find };

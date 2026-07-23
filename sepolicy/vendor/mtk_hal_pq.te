@@ -1,1 +1,2 @@
-allow mtk_hal_pq proc_dev_lcd:file { getattr open read };
+allow mtk_hal_pq proc_lcd_info:file { getattr open read };
+allow mtk_hal_pq proc_oplus_version:file { getattr open read };

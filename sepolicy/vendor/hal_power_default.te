@@ -1,0 +1,4 @@
+allow hal_power_default sysfs_devices:dir { open read };
+allow hal_power_default sysfs_devices:dir search;
+allow hal_power_default sysfs_devices:file { open read };
+allow hal_power_default vendor_sysfs_pmic:file { open read };

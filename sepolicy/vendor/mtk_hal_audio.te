@@ -1,3 +1,4 @@
-allow mtk_hal_audio default_android_hwservice:hwservice_manager find;
-allow mtk_hal_audio default_prop:property_service set;
-allow mtk_hal_audio system_prop:file { getattr map open read };
+allow mtk_hal_audio vendor_mtk_audio_prop:property_service set;
+allow mtk_hal_audio vendor_hal_audio_hwservice_oplus:hwservice_manager find;
+allow mtk_hal_audio proc_oplus_version:file read;
+allow mtk_hal_audio proc_oplus_version:file open;

@@ -1,1 +1,2 @@
-allow radio default_android_service:service_manager find;
+allow radio hal_radio_service:service_manager find;
+allow radio sysfs_devices:dir search;

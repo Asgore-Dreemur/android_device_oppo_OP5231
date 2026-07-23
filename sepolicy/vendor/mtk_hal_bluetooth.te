@@ -1,1 +1,1 @@
-allow mtk_hal_bluetooth proc_oplus_node:file { getattr open read };
+allow mtk_hal_bluetooth proc_oplus_version:file { getattr open read };

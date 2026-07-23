@@ -1,2 +1,1 @@
-allow kernel oplus_custom_block_device:blk_file { open read write };
-allow kernel proc_oplus_node:file { open read };
+allow kernel block_device:blk_file { read write open };

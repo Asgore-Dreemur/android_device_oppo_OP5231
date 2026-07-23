@@ -1,5 +1,9 @@
-allow mtk_hal_camera default_prop:file { getattr map open read };
-allow mtk_hal_camera proc_oplus_node:file { getattr open read };
+type proc_camera_node, proc_type, fs_type;
+
+allow mtk_hal_camera proc_oplus_version:file { getattr open read };
+allow mtk_hal_camera sysfs_devices:dir search;
+allow mtk_hal_camera proc_camera_node:file { getattr open read write };
 allow mtk_hal_camera camera_persist_file:dir { add_name search write };
 allow mtk_hal_camera camera_persist_file:file { create getattr open read setattr write };
-allow mtk_hal_camera vendor_default_prop:property_service set;
+allow mtk_hal_camera vendor_mtk_camera_prop:property_service set;
+allow mtk_hal_camera persist_data_file:dir search;

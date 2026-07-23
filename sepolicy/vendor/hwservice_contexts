@@ -1,0 +1,10 @@
+vendor.oplus.hardware.oplusSensor::ISensorFeature                       u:object_r:vendor_hal_sensor_hwservice_oplus:s0
+vendor.oplus.hardware.commondcs::ICommonDcsHalService                   u:object_r:vendor_hal_fingerprint_hwservice_oplus:s0
+vendor.oplus.hardware.biometrics.fingerprint::IBiometricsFingerprint    u:object_r:vendor_hal_fingerprint_hwservice_oplus:s0
+vendor.qti.hardware.soter::ISoter                                       u:object_r:vendor_hal_tee_hwservice_oplus:s0
+vendor.oplus.hardware.virtual_device.audio::IStatusProvider             u:object_r:vendor_hal_audio_hwservice_oplus:s0
+vendor.oplus.hardware.radio::IOplusRadio                                u:object_r:vendor_hal_radio_hwservice_oplus:s0
+vendor.oplus.hardware.appradio::IOplusAppRadio                          u:object_r:vendor_hal_radio_hwservice_oplus:s0
+vendor.oplus.hardware.wifi.supplicant::IOplusSupplicant                 u:object_r:vendor_hal_wlan_hwservice_oplus:s0
+vendor.oplus.hardware.orms::IOrmsHalProxy                               u:object_r:vendor_hal_orms_hwservice_oplus:s0
+vendor.oplus.hardware.orms.ormsHalService::IOrmsHalService              u:object_r:vendor_hal_orms_hwservice_oplus:s0
